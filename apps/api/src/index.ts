@@ -6,7 +6,6 @@ const app = express();
 app.use(express.json());
 dotenv.config();
 
-console.log(process.env.REDIS_URL);
 const port:number = 3001;
 const redis = new Redis(process.env.REDIS_URL as string);
 
