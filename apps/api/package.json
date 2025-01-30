@@ -6,10 +6,15 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "express": "^4.21.2"
+    "@sendgrid/mail": "^8.1.4",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "redis": "^4.7.0"
   },
   "scripts": {
-  "build": "esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "build": "esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
     "dev": "yarn run build && node dist/index.js --trace-warning"
   },
   "devDependencies": {
